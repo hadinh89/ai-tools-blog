@@ -49,7 +49,7 @@ async function* walk(dir) {
 }
 
 function toUrlPath(absPath) {
-  const rel = relative(ROOT, absPath).split('\').join('/'); // normalize windows
+  const rel = relative(ROOT, absPath).split('\\').join('/'); // normalize windows
   // Home
   if (rel === 'index.html') return '/';
   // Use clean map for known blog posts
