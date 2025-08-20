@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kho Công Cụ AI Cho Mọi Nhu Cầu</title>
+  <meta name="description" content="Khám phá kho công cụ AI đa dạng cho viết nội dung, video, ảnh, lập trình và hơn thế nữa." />
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:title" content="Kho Công Cụ AI Cho Mọi Nhu Cầu" />
+  <meta property="og:description" content="Khám phá kho công cụ AI đa dạng cho viết nội dung, video, ảnh, lập trình và hơn thế nữa." />
+  <meta property="og:image" content="assets/images/hero.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kho Công Cụ AI Cho Mọi Nhu Cầu" />
+  <meta name="twitter:description" content="Khám phá kho công cụ AI đa dạng cho viết nội dung, video, ảnh, lập trình và hơn thế nữa." />
+  <meta name="twitter:image" content="assets/images/hero.jpg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-JLE3nB+wC4IVz8/igF7C1YblvGU0N0tbRxEcqUYYrbj3pMtBztK4C7uNJMJMZ4WPw+zDNjBnZrTFlkRGxXtrsw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="nav-logo"><a href="index.html">AI Tools Hub</a></div>
+      <nav class="nav-links">
+        <a href="recommended.html">Công cụ khuyên dùng</a>
+        <a href="categories.html">Danh mục công cụ</a>
+        <a href="compare.html">So sánh</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="contact.html">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Kho Công Cụ AI Cho Mọi Nhu Cầu</h1>
+        <p class="hero-desc">Khám phá, so sánh và chọn công cụ AI phù hợp với bạn.</p>
+        <form class="search-bar" onsubmit="return goToSearch(event);">
+          <input
+            type="text"
+            id="heroSearch"
+            placeholder="Tìm kiếm theo nhu cầu..."
+            list="search-options"
+            autocomplete="off"
+          />
+          <datalist id="search-options">
+            <option value="viết nội dung"></option>
+            <option value="tạo video"></option>
+            <option value="tạo ảnh"></option>
+            <option value="phân tích dữ liệu"></option>
+            <option value="tự động hóa"></option>
+            <option value="lập trình"></option>
+            <option value="SEO"></option>
+            <option value="dịch thuật"></option>
+            <option value="giọng nói"></option>
+            <option value="chatbot"></option>
+            <option value="trợ lý cá nhân"></option>
+            <option value="slides"></option>
+          </datalist>
+        </form>
+        <div class="hero-buttons">
+          <a href="categories.html" class="btn btn-primary">Khám phá ngay</a>
+          <a href="recommended.html" class="btn btn-secondary">Công cụ khuyên dùng</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="top-trending">
+      <div class="container">
+        <h2 class="section-title">Top xu hướng</h2>
+        <div id="trendingGrid" class="tool-grid"></div>
+      </div>
+    </section>
+
+    <section id="discover-by-goal">
+      <div class="container">
+        <h2 class="section-title">Khám phá theo mục tiêu</h2>
+        <div id="goalGrid" class="category-grid"></div>
+      </div>
+    </section>
+
+    <section id="quick-compare">
+      <div class="container">
+        <h2 class="section-title">So sánh nhanh</h2>
+        <div class="comparison-block">
+          <table class="compare-table" id="quickCompareTable"></table>
+        </div>
+      </div>
+    </section>
+
+    <section id="guide">
+      <div class="container">
+        <h2 class="section-title">Hướng dẫn chọn công cụ</h2>
+        <div class="blog-grid" id="guidePosts"></div>
+      </div>
+    </section>
+
+    <div class="container">
+      <p style="font-size:0.8rem;color:var(--text-secondary); margin-top:-1rem;">
+        Chúng tôi có thể nhận hoa hồng khi bạn nhấp link—không làm tăng chi phí của bạn.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Liên kết nhanh</h4>
+          <a href="index.html">Trang chủ</a>
+          <a href="categories.html">Danh mục công cụ</a>
+          <a href="compare.html">So sánh</a>
+          <a href="blog/index.html">Blog</a>
+        </div>
+        <div>
+          <h4>Tài liệu</h4>
+          <a href="about.html">Giới thiệu</a>
+          <a href="privacy-policy.html">Chính sách bảo mật</a>
+          <a href="terms.html">Điều khoản sử dụng</a>
+          <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+        </div>
+        <div>
+          <h4>Liên hệ</h4>
+          <a href="mailto:support@example.com">support@example.com</a>
+          <a href="contact.html">Form liên hệ</a>
+        </div>
+        <div class="newsletter">
+          <h4>Nhận bản tin</h4>
+          <input type="email" placeholder="Nhập email của bạn" />
+          <button type="button">Đăng ký</button>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1rem;">&copy; 2025 AI Tools Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Load dataset first so it attaches tools to the global window.  Using a
+       normal script tag here avoids ES module CORS issues when loading
+       the site from file:// -->
+  <script src="assets/js/data.js"></script>
+  <!-- Load a smaller home-specific script instead of the large main.js.  -->
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>So sánh công cụ AI</title>
+  <meta name="description" content="So sánh các công cụ AI theo nhiều tiêu chí để chọn lựa phù hợp với bạn." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-JLE3nB+wC4IVz8/igF7C1YblvGU0N0tbRxEcqUYYrbj3pMtBztK4C7uNJMJMZ4WPw+zDNjBnZrTFlkRGxXtrsw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="nav-logo"><a href="index.html">AI Tools Hub</a></div>
+      <nav class="nav-links">
+        <a href="recommended.html">Công cụ khuyên dùng</a>
+        <a href="categories.html">Danh mục công cụ</a>
+        <a href="compare.html" class="active">So sánh</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="contact.html">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section style="padding-top:2rem;">
+      <div class="container">
+        <h1 class="section-title">So sánh công cụ AI</h1>
+        <p class="section-desc">Chọn 2–4 công cụ để xem sự khác biệt về tính năng, chất lượng, giá trị và nhiều tiêu chí khác.</p>
+        <div id="compareSelectors" style="display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;"></div>
+        <button id="addToolBtn" class="btn btn-secondary" style="margin-bottom:1rem;">+ Thêm công cụ</button>
+        <div class="comparison-block">
+          <table class="compare-table" id="comparisonTable"></table>
+        </div>
+      </div>
+    </section>
+
+    <section id="wizard-section" style="padding-top:2rem;border-top:1px solid var(--border-color);">
+      <div class="container">
+        <h2 class="section-title">Chọn theo gợi ý</h2>
+        <p class="section-desc">Trả lời vài câu hỏi để nhận gợi ý công cụ phù hợp.</p>
+        <form id="wizardForm" style="max-width:600px;">
+          <div class="wizard-question">
+            <p style="margin-bottom:0.5rem;">1. Bạn quan tâm mục tiêu nào?</p>
+            <select name="goal" required style="width:100%;padding:0.5rem;border-radius:6px;background:var(--card-bg);border:1px solid var(--border-color);color:var(--text-secondary);">
+              <option value="">Chọn mục tiêu</option>
+              <option value="Viết nội dung">Viết nội dung</option>
+              <option value="Video/Animation">Video/Animation</option>
+              <option value="Ảnh/Design">Ảnh/Design</option>
+              <option value="Âm thanh/Giọng nói">Âm thanh/Giọng nói</option>
+              <option value="Lập trình/Copilot">Lập trình/Copilot</option>
+              <option value="Data/Analytics">Data/Analytics</option>
+              <option value="Tự động hóa Workflow">Tự động hóa Workflow</option>
+              <option value="SEO/Marketing">SEO/Marketing</option>
+              <option value="Slides/Tài liệu">Slides/Tài liệu</option>
+              <option value="Học tập/Nghiên cứu">Học tập/Nghiên cứu</option>
+              <option value="Chatbot/Agent">Chatbot/Agent</option>
+            </select>
+          </div>
+          <div class="wizard-question" style="margin-top:1rem;">
+            <p style="margin-bottom:0.5rem;">2. Trình độ kỹ năng của bạn?</p>
+            <select name="skill" required style="width:100%;padding:0.5rem;border-radius:6px;background:var(--card-bg);border:1px solid var(--border-color);color:var(--text-secondary);">
+              <option value="">Chọn kỹ năng</option>
+              <option value="Người mới">Người mới</option>
+              <option value="Trung cấp">Trung cấp</option>
+              <option value="Chuyên sâu">Chuyên sâu</option>
+            </select>
+          </div>
+          <div class="wizard-question" style="margin-top:1rem;">
+            <p style="margin-bottom:0.5rem;">3. Ngân sách dự kiến (USD/tháng)?</p>
+            <select name="budget" required style="width:100%;padding:0.5rem;border-radius:6px;background:var(--card-bg);border:1px solid var(--border-color);color:var(--text-secondary);">
+              <option value="">Chọn mức giá</option>
+              <option value="0">Miễn phí</option>
+              <option value="10">Dưới 10</option>
+              <option value="30">10–29</option>
+              <option value="100">30–99</option>
+              <option value="101">100+</option>
+            </select>
+          </div>
+          <div class="wizard-question" style="margin-top:1rem;">
+            <p style="margin-bottom:0.5rem;">4. Ngôn ngữ bạn muốn hỗ trợ?</p>
+            <select name="language" required style="width:100%;padding:0.5rem;border-radius:6px;background:var(--card-bg);border:1px solid var(--border-color);color:var(--text-secondary);">
+              <option value="">Chọn ngôn ngữ</option>
+              <option value="Vi">Tiếng Việt</option>
+              <option value="En">Tiếng Anh</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top:1.5rem;">Gợi ý công cụ</button>
+        </form>
+        <div id="wizardResult" style="margin-top:1.5rem;"></div>
+      </div>
+    </section>
+    <div class="container">
+      <p style="font-size:0.8rem;color:var(--text-secondary); margin-top:1.5rem;">
+        Chúng tôi có thể nhận hoa hồng khi bạn nhấp link—không làm tăng chi phí của bạn.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Liên kết nhanh</h4>
+          <a href="index.html">Trang chủ</a>
+          <a href="categories.html">Danh mục công cụ</a>
+          <a href="compare.html">So sánh</a>
+          <a href="blog/index.html">Blog</a>
+        </div>
+        <div>
+          <h4>Tài liệu</h4>
+          <a href="about.html">Giới thiệu</a>
+          <a href="privacy-policy.html">Chính sách bảo mật</a>
+          <a href="terms.html">Điều khoản sử dụng</a>
+          <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+        </div>
+        <div>
+          <h4>Liên hệ</h4>
+          <a href="mailto:support@example.com">support@example.com</a>
+          <a href="contact.html">Form liên hệ</a>
+        </div>
+        <div class="newsletter">
+          <h4>Nhận bản tin</h4>
+          <input type="email" placeholder="Nhập email của bạn" />
+          <button type="button">Đăng ký</button>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1rem;">&copy; 2025 AI Tools Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

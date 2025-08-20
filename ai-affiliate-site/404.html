@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Không tìm thấy trang</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-JLE3nB+wC4IVz8/igF7C1YblvGU0N0tbRxEcqUYYrbj3pMtBztK4C7uNJMJMZ4WPw+zDNjBnZrTFlkRGxXtrsw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="nav-logo"><a href="index.html">AI Tools Hub</a></div>
+    </div>
+  </header>
+  <main style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:70vh;text-align:center;padding:2rem;">
+    <h1 style="font-size:4rem;line-height:1;margin:0;">404</h1>
+    <p style="font-size:1.2rem;color:var(--text-secondary);">Xin lỗi, chúng tôi không tìm thấy trang bạn yêu cầu.</p>
+    <div class="search-bar" style="max-width:400px;margin-top:1rem;">
+      <input type="text" id="search404" placeholder="Tìm kiếm công cụ..." autocomplete="off" onkeydown="if(event.key==='Enter'){window.location.href='categories.html?search='+this.value;}" />
+    </div>
+    <div style="margin-top:1.5rem;">
+      <a href="index.html" class="btn btn-primary">Trở về trang chủ</a>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p style="text-align:center;margin-top:1rem; font-size:0.8rem; color:var(--text-secondary);">&copy; 2025 AI Tools Hub. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

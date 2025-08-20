@@ -1,0 +1,9 @@
+{
+  "name": "tooltuonglai-static-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generate-sitemap.mjs",
+    "sitemap": "node scripts/generate-sitemap.mjs"
+  }
+}

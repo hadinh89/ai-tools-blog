@@ -1,0 +1,22 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/blog/notion-ai.html",                "destination": "/blog/notion-ai",             "permanent": true },
+    { "source": "/blog/elevenlabs-review.html",        "destination": "/blog/elevenlabs",           "permanent": true },
+    { "source": "/blog/synthesia-video-guide.html",    "destination": "/blog/synthesia",            "permanent": true },
+    { "source": "/blog/leonardo-ai-review.html",       "destination": "/blog/leonardo-ai",          "permanent": true },
+    { "source": "/blog/canva-magic-studio-guide.html", "destination": "/blog/canva-magic-studio",   "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/blog/notion-ai",          "destination": "/blog/notion-ai.html" },
+    { "source": "/blog/elevenlabs",         "destination": "/blog/elevenlabs-review.html" },
+    { "source": "/blog/synthesia",          "destination": "/blog/synthesia-video-guide.html" },
+    { "source": "/blog/leonardo-ai",        "destination": "/blog/leonardo-ai-review.html" },
+    { "source": "/blog/canva-magic-studio", "destination": "/blog/canva-magic-studio-guide.html" }
+  ],
+  "headers": [
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
+    { "source": "/(.*).html",   "headers": [{ "key": "Cache-Control", "value": "public, max-age=60, s-maxage=600" }] }
+  ]
+}
